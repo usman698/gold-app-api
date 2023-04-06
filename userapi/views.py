@@ -50,13 +50,13 @@ def mail(request):
             number = random.randint(1000,9999)
             profile_obj.code = number
             profile_obj.save()
-            # send_mail(
-            #     'Password Reset Email',
-            #     '4343',
-            #     'noreply@webvisionary.info',
-            #     [email],
-            #     fail_silently=False,
-            # )
+            send_mail(
+                'Password Reset Email',
+                '4343',
+                'noreply@webvisionary.info',
+                [email],
+                fail_silently=False,
+            )
             return Response(status=status.HTTP_200_OK)
         except Exception as e:
             print(e)
