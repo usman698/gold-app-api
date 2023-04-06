@@ -107,27 +107,27 @@ WSGI_APPLICATION = 'userpanel.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-        'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'webvhjwi_gold-app',
-        'USER': 'webvhjwi_gold-app',
-        'PASSWORD': 'webvhjwi_gold-app',
-        'HOST': 'localhost',
-        'PORT': '3306',
-    }
-}
-
 # DATABASES = {
 #         'default': {
 #         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'gold',
-#         'USER': 'root',
-#         'PASSWORD': '',
+#         'NAME': 'webvhjwi_gold_app',
+#         'USER': 'webvhjwi_gold_app',
+#         'PASSWORD': 'webvhjwi_gold_app',
 #         'HOST': 'localhost',
 #         'PORT': '3306',
 #     }
 # }
+
+DATABASES = {
+        'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'gold',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    }
+}
 
 
 # Password validation

@@ -10,3 +10,29 @@ git push -u origin main
 git remote add origin https://github.com/usman698/gold_app.git
 git branch -M main
 git push -u origin main
+
+Removing a remote repository
+Use the git remote rm command to remove a remote URL from your repository.
+
+The git remote rm command takes one argument:
+
+A remote name, for example, destination
+Removing the remote URL from your repository only unlinks the local and remote repositories. It does not delete the remote repository.
+
+Example of removing a remote repository
+These examples assume you're cloning using HTTPS, which is recommended.
+
+$ git remote -v
+# View current remotes
+> origin  https://github.com/OWNER/REPOSITORY.git (fetch)
+> origin  https://github.com/OWNER/REPOSITORY.git (push)
+> destination  https://github.com/FORKER/REPOSITORY.git (fetch)
+> destination  https://github.com/FORKER/REPOSITORY.git (push)
+
+$ git remote rm destination
+# Remove remote
+$ git remote -v
+# Verify it's gone
+> origin  https://github.com/OWNER/REPOSITORY.git (fetch)
+> origin  https://github.com/OWNER/REPOSITORY.git (push)
+Note: git remote rm does not delete the remote repository from the server. It simply removes the remote and its references from your local repository.

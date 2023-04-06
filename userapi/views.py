@@ -53,7 +53,7 @@ def mail(request):
             send_mail(
                 'Password Reset Email',
                 number,
-                'noreply@my700live.com',
+                'noreply@webvisionary.info',
                 [email],
                 fail_silently=False,
             )
