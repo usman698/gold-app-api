@@ -48,12 +48,11 @@ def mail(request):
             user_obj = User.objects.get(id=id)
             profile_obj = Profile.objects.get(user=user_obj)
             number = random.randint(1000,9999)
-            number = 4343
             profile_obj.code = number
             profile_obj.save()
             send_mail(
                 'Password Reset Email',
-                '4343',
+                number,
                 'noreply@webvisionary.info',
                 [email],
                 fail_silently=False,
