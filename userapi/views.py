@@ -52,7 +52,7 @@ def mail(request):
             profile_obj.save()
             send_mail(
                 'Password Reset Email',
-                number,
+                '4343',
                 'noreply@webvisionary.info',
                 [email],
                 fail_silently=False,
